@@ -1,13 +1,13 @@
 import * as THREE from "three";
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { observer } from "mobx-react-lite";
 import { useGLTF } from "@react-three/drei";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { GLTF } from "three-stdlib";
-
-export function Tree(props: JSX.IntrinsicElements["group"]) {
-
+import { useFrame } from "@react-three/fiber";
+import { mainStore } from "../store/MainStore";
+function Ring(props: JSX.IntrinsicElements["group"]) {
   const modelRef = useRef<THREE.Group>(null!);
-  useFrame((state, delta) => (modelRef!.current!.rotation.y += -0.001));
+  const animation = !mainStore.isStopModel ? -0.001 : -0.0;
+  useFrame((state, delta) => (modelRef!.current!.rotation.y += animation));
   const { nodes, materials } = useGLTF("models/strip.glb") as any;
 
   return (
@@ -23,7 +23,7 @@ export function Tree(props: JSX.IntrinsicElements["group"]) {
     </group>
   );
 }
-
+export default observer(Ring);
 useGLTF.preload("models/strip.glb");
 
 /*

@@ -1,0 +1,16 @@
+.time {
+  text-align: center;
+  width: 180px;
+  background: #fcfaf8;
+  border: 1px solid var(--black);
+  border-radius: var(--br);
+  padding: 8px 0;
+  margin-bottom: 10px;
+  h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+}

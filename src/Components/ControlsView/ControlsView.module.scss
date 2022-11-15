@@ -1,0 +1,19 @@
+.controls {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 1;
+  background: #fcfaf8;
+  border: 1px solid var(--black);
+  border-radius: var(--br);
+  padding: 8px 34px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  svg {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

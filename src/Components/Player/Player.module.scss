@@ -1,0 +1,39 @@
+.player {
+  background: #fcfaf8;
+  border: 1px solid var(--black);
+  border-radius: var(--br);
+  padding: 8px 34px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &.ready {
+    margin-bottom: 28px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    svg {
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+  &__info {
+    position: absolute;
+    bottom: -21px;
+    background-color: var(--black);
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 2px;
+    width: 112px;
+    height: 18px;
+    border-radius: 0 0 6px 6px;
+  }
+}
