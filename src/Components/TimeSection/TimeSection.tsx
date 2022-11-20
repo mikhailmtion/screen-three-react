@@ -6,7 +6,7 @@ function TimeSection() {
   useEffect(() => {
     setInterval(() => setDateState(new Date()), 30000);
   }, []);
-  
+
   return (
     <div className={styles.time}>
       <h1>

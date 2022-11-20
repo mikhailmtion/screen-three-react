@@ -1,14 +1,14 @@
 import Player from "../Player/Player";
 import TimeSection from "../TimeSection/TimeSection";
-import styles from "./SideBar.module.scss";
+import styles from "./LeftSideBar.module.scss";
 
-function SideBar() {
+function LeftSideBar() {
   return (
-    <div className={styles.side}>
+    <div className={styles.left}>
       <TimeSection />
       <Player/>
     </div>
   );
 }
 
-export default SideBar;
+export default LeftSideBar;

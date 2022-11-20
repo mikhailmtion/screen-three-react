@@ -1,6 +1,6 @@
 .player {
-  background: #fcfaf8;
-  border: 1px solid var(--black);
+  background: var(--bg-menu);
+  border: 1px solid var(--border-color);
   border-radius: var(--br);
   padding: 8px 34px;
   margin-bottom: 10px;
@@ -21,7 +21,6 @@
       }
     }
   }
-
 
   &__info {
     position: absolute;

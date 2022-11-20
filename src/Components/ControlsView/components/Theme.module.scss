@@ -1,0 +1,24 @@
+.theme {
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+
+  &.brown {
+    background-color: var(--bg-brown);
+  }
+  &.dark {
+    background-color: var(--bg-dark);
+  }
+  &.white {
+    background-color: var(--bg-white);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.active {
+    border: 2px solid var(--active-color);
+  }
+}

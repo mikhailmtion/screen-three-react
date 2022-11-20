@@ -1,9 +1,10 @@
 import { makeAutoObservable } from "mobx";
-
 class MainStore {
   isFullScreen = false;
   isStopModel = false;
   isReturnModel = false;
+  isShowSettings = false;
+  theme = "white";
 
   constructor() {
     makeAutoObservable(this);
@@ -22,6 +23,14 @@ class MainStore {
 
   setStopModel = () => {
     this.isStopModel = !this.isStopModel;
+  };
+
+  setShowingSettings = () => {
+    this.isShowSettings = !this.isShowSettings;
+  };
+  
+  setTheme = (theme: string) => {
+    this.theme = theme;
   };
 }
 

@@ -32,8 +32,8 @@ function Player() {
     }
   };
 
-  return ( 
-    <div className={`${styles.player} ${playerStore.isReady ?`${styles.ready}` :""}`}> 
+  return (
+    <div className={`${styles.player} ${playerStore.isReady ? `${styles.ready}` : ""}`}>
       <ReactPlayer
         url={dataMusic[index].url}
         controls={true}
