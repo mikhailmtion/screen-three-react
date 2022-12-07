@@ -2,9 +2,10 @@ import Theme from "./Theme";
 import styles from "./ThemeSwitch.module.scss";
 import { mainStore } from "../../../store/MainStore";
 import { observer } from "mobx-react-lite";
+import { themeType } from "../../../types/theme";
 
 function ThemeSwitch() {
-  const handleClickTheme = (theme: string) => {
+  const handleClickTheme = (theme: themeType) => {
     mainStore.setTheme(theme);
   };
   return (

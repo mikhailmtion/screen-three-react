@@ -1,10 +1,11 @@
 import styles from "./Theme.module.scss";
 import { mainStore } from "../../../store/MainStore";
 import { observer } from "mobx-react-lite";
+import { themeType } from "../../../types/theme";
 
 type ThemeProps = {
-  color: string;
-  handleClickTheme: (color: string) => void;
+  color: themeType;
+  handleClickTheme: (color: themeType) => void;
 };
 
 function Theme({ color, handleClickTheme }: ThemeProps) {
